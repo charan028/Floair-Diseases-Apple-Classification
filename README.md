@@ -1,4 +1,4 @@
-# Floair-Diseases-Apple-Classification
+# Floair-Diseases-AppleTree-Classification
 #### This project is to show whether the given sample is infected or healthy.
 <img src="http://www.missouribotanicalgarden.org/portals/0/Gardening/Gardening%20Help/images/Pests/Apple_Scab164.jpg">
 
