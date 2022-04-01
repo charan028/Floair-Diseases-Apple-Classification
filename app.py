@@ -7,7 +7,8 @@ from werkzeug.utils import secure_filename
 
 #define flask app
 app=Flask(__name__)
-model=load_model(r'C:\Users\merug\Desktop\2021 project\Apple-Classification\plant-pathology-2020-fgvc7\model\apple1.h5')
+model_path='model/apple1.h5'
+model=load_model(model_path)
 def model_predict(img_path,model):
     test_image=image.load_img(img_path,target_size=(224,224))
     test_image=image.img_to_array(test_image)
@@ -35,4 +36,4 @@ def upload():
         return output
     return None
 if __name__=='__main__':
-    app.run(debug=False,port=5926)
+    app.run()
