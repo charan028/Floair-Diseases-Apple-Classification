@@ -25,9 +25,9 @@ def upload():
         #get the file host
         f=request.files['file']
         #save the file to upload folder
-        basepath=os.path.dirname(os.path.realpath('__file__'))
-        file_path=os.path.join(basepath,'uploads',secure_filename(f.filename))
-        f.save(file_path)
+#         basepath=os.path.dirname(os.path.realpath('__file__'))
+#         file_path=os.path.join(basepath,'uploads',secure_filename(f.filename))
+#         f.save(file_path)
         result=model_predict(f,model)
         categories=['Healthy','Multiple disease','Rust','Scab']
         # process for human understanding
