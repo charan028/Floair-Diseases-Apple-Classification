@@ -28,7 +28,7 @@ def upload():
         basepath=os.path.dirname(os.path.realpath('__file__'))
         file_path=os.path.join(basepath,'uploads',secure_filename(f.filename))
         f.save(file_path)
-        result=model_predict(file_path,model)
+        result=model_predict(f,model)
         categories=['Healthy','Multiple disease','Rust','Scab']
         # process for human understanding
         pre_class=result.argmax()
