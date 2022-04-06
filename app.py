@@ -10,8 +10,8 @@ app=Flask(__name__)
 model_path='model/apple1.h5'
 model=load_model(model_path)
 def model_predict(img_path,model):
-#     test_image=image.load_img(img_path,target_size=(224,224))
-    test_image=image.img_to_array(img_path)
+    test_image=image.load_img(img_path,target_size=(224,224))
+    test_image=image.img_to_array(test_img)
     test_image=test_image/225
     test_image=np.expand_dims(test_image,axis=0)
     result=model.predict(test_image)
