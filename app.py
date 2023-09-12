@@ -18,7 +18,7 @@ def model_predict(img_path,model):
     return  result
 @app.route("/")
 def index():
-    return  render_template('index.html')
+    return  render_template("index.html")
 @app.route("/predict",methods=['GET','POST'])
 def upload():
     if request.method=='POST':
