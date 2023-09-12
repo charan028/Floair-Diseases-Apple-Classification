@@ -16,7 +16,7 @@ def model_predict(img_path,model):
     test_image=np.expand_dims(test_image,axis=0)
     result=model.predict(test_image)
     return  result
-@app.route('/',methods=['GET'])
+@app.route('/app',methods=['GET'])
 def index():
     return  render_template('index.html')
 @app.route('/predict',methods=['GET','POST'])
