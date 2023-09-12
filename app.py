@@ -6,8 +6,8 @@ from tensorflow.keras.preprocessing import image
 from werkzeug.utils import secure_filename
 
 #define flask app
-#app=Flask(__name__)
-app = Flask(__name__, template_folder='templates') 
+app=Flask(__name__)
+#app = Flask(__name__, template_folder='templates') 
 model_path='model/apple1.h5'
 model=load_model(model_path)
 def model_predict(img_path,model):
