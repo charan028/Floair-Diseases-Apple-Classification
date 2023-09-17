@@ -25,7 +25,7 @@ def model_predict(img_path,model):
 def index():
     return render_template('index.html')
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['POST'])
 def upload():
     if request.method=='POST':
         # get the file from post request
@@ -44,7 +44,7 @@ def upload():
         # process your result for human
         pred_class = result.argmax()
         output=categories[pred_class]
-        return output
+        return render_template('index.html',prediction=output)
     return None
 
 if __name__=='__main__':
