@@ -1,27 +1,27 @@
-click==8.0.3
+click
 
-colorama==0.4.4
+colorama
 
-Flask==2.0.2
+Flask
 
-gunicorn==20.1.0
+gunicorn
 
 
 
-idna==3.4
+idna
 
-itsdangerous==2.0.1
+itsdangerous
 
-Jinja2==3.0.3
+Jinja2
 
-joblib==1.3.2
+joblib
 
-keras==2.13.1
-MarkupSafe==2.0.1
-numpy==1.24.3
-Pillow==10.0.0
-scikit-learn==1.3.0
-scipy==1.11.2
+keras
+MarkupSafe
+numpy
+Pillow
+scikit-learn
+scipy
 
 
 
