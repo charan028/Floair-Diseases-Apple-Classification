@@ -1,7 +1,3 @@
-from flask import Flask,render_template,request
-import numpy as np
-import os
-from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from werkzeug.utils import secure_filename
 
@@ -25,7 +21,7 @@ def model_predict(img_path,model):
 def index():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET','POST'])
 def upload():
     if request.method=='POST':
         # get the file from post request
@@ -44,8 +40,8 @@ def upload():
         # process your result for human
         pred_class = result.argmax()
         output=categories[pred_class]
-        return render_template('index.html',prediction=output)
+        return output
     return None
 
-
-
+if __name__=='__main__':
+    app.run(debug=False,port=5926)
